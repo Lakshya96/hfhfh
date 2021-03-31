@@ -3,6 +3,7 @@ class Form{
         this.input=createInput("Write Name Here");
         this.input1=createInput("Write Answer's Number Here");
         this.button=createButton("Play");
+        this.reset=createButton("Reset");
         this.greeting=createElement('h3');
         this.question1=createElement('h3');
         this.option1=createElement('h3');
@@ -48,12 +49,12 @@ class Form{
             this.greeting.position(170,300);
         });
 
-        //this.resetButton.position(300,200);
+        this.resetButton.position(300,200);
 
-        //this.resetButton.mousePressed(()=>{
-        //    game.updateState(0);
-        //    player.updateCount(0);
-        //});
+        this.resetButton.mousePressed(()=>{
+            game.updateState(0);
+            player.updateCount(0);
+        });
     }
     hide1(){
         this.input.hide();
